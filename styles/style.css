@@ -1,7 +1,6 @@
 html {
   font-family: "Exo 2", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
   background-color: #000f4d;
   color: #ffffff;
@@ -9,14 +8,19 @@ html {
 
 body {
 }
-
-h1 {
+.sidebar-menu {
+  list-style-type: none;
   margin: 0;
-  font-size: 2rem;
-  text-shadow: 3px 3px 1px black;
+  padding: 0;
 }
-img {
-  display: block;
-  margin: 0 0;
-  max-width: 5%;
+.sidebar-topo {
+  width: 30px;
+  height: 30px;
+  max-width: 100%;
+}
+
+.label-topo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
 }
