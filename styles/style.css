@@ -3,39 +3,52 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
   background-color: #000f4d;
+  color: #ffffff;
 }
-
+body {
+  margin: 0;
+}
 a {
   text-decoration: none;
   color: #ffffff;
 }
 
 .sidebar {
+  box-sizing: border-box;
   width: 200px;
   background: #1e293b;
-  padding: 5px 16px;
+  padding: 16px;
   position: sticky; /* fica fixa ao rolar a página */
   top: 0;
   height: 100vh;
 }
-
-.sidebar-menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.sidebar-menu a {
-  display: flex;
+.botao-home {
+  display: grid;
+  grid-template-columns: auto 1fr; /* coluna do logo + coluna do texto */
+  grid-template-rows: auto auto; /* duas linhas */
+  column-gap: 0.6rem;
+  row-gap: 0.15rem;
   align-items: center;
-  gap: 0.5rem;
 }
+
 .sidebar-topo {
-  width: 30px;
-  height: 30px;
-  max-width: 100%;
+  grid-row: 1 / span 2; /* o logo ocupa as 2 linhas */
+  width: 2.6rem; /* ajuste o tamanho como preferir */
+  height: auto;
 }
 
 #sidebarshuukan {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  line-height: 1;
+  align-self: end; /* encosta o nome na linha de baixo */
+}
+
+.botao-home p {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  align-self: start; /* encosta o slogan na linha de cima */
+  color: #a9bcd9;
 }
