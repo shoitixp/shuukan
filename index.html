@@ -2,6 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Yasuichi Shouta" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shuukan</title>
     <script async src="scripts/main.js"></script>
@@ -20,11 +21,17 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/icone-logo.png"
+      href="images/emblema-shuukan.png"
+    />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:title" content="Shuukan - Be proud of yourself" />
+    <meta
+      property="og:description"
+      content="Assistente para controle e organização Pessoal"
     />
   </head>
   <body>
-    <aside class="sidebar">
+    <header class="page-layout-header">
       <a href="index.html" class="botao-home">
         <img
           src="images/emblema-shuukan.png"
@@ -34,7 +41,15 @@
         <span id="sidebarshuukan">Shuukan</span>
         <p>Be proud of yourself</p>
       </a>
-
+      <input
+        type="text"
+        id="quick"
+        name="quick"
+        placeholder="Quick command..."
+      />
+      <hr />
+    </header>
+    <aside class="sidebar">
       <nav class="sidebar-menu">
         <ul>
           <li>
@@ -61,5 +76,13 @@
       <p>Aikido</p>
       <p>Caligraphy</p>
     </aside>
+    <main>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
+        ><p>elementosHTML</p></a
+      >
+      <label for="nome">Digite seu nome:</label>
+      <input type="text" id="nome" name="nome" />
+    </main>
   </body>
 </html>

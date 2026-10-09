@@ -8,6 +8,12 @@ html {
 body {
   margin: 0;
 }
+
+.page-layout-header {
+  position: sticky;
+  top: 0;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -20,7 +26,6 @@ a {
   padding: 16px;
   position: sticky; /* fica fixa ao rolar a página */
   top: 0;
-  height: 100vh;
 }
 .botao-home {
   display: grid;
@@ -51,4 +56,8 @@ a {
   line-height: 1.2;
   align-self: start; /* encosta o slogan na linha de cima */
   color: #a9bcd9;
+}
+
+main {
+  margin-left: 250px; /* espaço para a sidebar */
 }
