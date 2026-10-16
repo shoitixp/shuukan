@@ -5,6 +5,17 @@ html {
   background-color: #000f4d;
   color: #ffffff;
 }
+
+/* excluir depois (inicio)*/
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.3);
+}
+/* excluir depois (fim)*/
+
+/* layout a partir de tablet/desktop */
+@media (min-width: 768px) {
+}
+
 body {
   margin: 0;
 }

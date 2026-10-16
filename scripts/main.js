@@ -1,12 +1,12 @@
-var senha = prompt("Bem vindo de volta! Digite a senha:");
+/*var senha = prompt("Bem vindo de volta! Digite a senha:");
 if (senha === "1") {
   alert("Acesso permitido!");
 } else {
   alert("Senha incorreta, tente novamente");
-}
+}*/
 
-senha.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-
+/*senha.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+ */ //adicionar currency BRL nos valores
 function atualizarRelogio() {
   const agora = new Date();
 

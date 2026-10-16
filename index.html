@@ -36,13 +36,9 @@
   <body>
     <header class="page-layout-header">
       <a href="index.html" class="home">
-        <img
-          src="images/logo-shuukan.png"
-          alt="logo do Shuukan"
-          class="logo-shuukan"
-        />
+        <img src="images/logo-shuukan.png" alt="" class="logo-shuukan" />
         <span id="nome-site">Shuukan</span>
-        <span id="slogan"><i lang="en">Be proud of yourself</i></span>
+        <span id="slogan" lang="en">Be proud of yourself</span>
       </a>
       <input
         type="text"
@@ -51,9 +47,9 @@
         placeholder="Quick command..."
       />
       <div class="painel-data">
-        <time id="data-hoje"></time>
-        <time id="dia-semana-hoje"></time>
-        <time id="hora-hoje"></time>
+        <time id="data-hoje" datetime="2026-01-31"></time>
+        <span id="dia-semana-hoje"></span>
+        <time id="hora-hoje" datetime="00:00"></time>
       </div>
       <div class="painel-tarefa">
         <p>
@@ -73,18 +69,25 @@
           placeholder="Condicional"
         />
       </div>
-      <hr />
     </header>
     <nav class="sidebar">
-      <ul type="none">
+      <ul>
+        <li>
+          <a href="#"
+            ><span class="material-symbols-rounded">calendar_clock</span>Agenda
+            Geral
+          </a>
+        </li>
         <li>
           <a href="#"
             ><span class="material-symbols-rounded">payments</span>Financeiro
           </a>
-          <ul type="none">
+          <ul>
             <li><a href="#">Despesas</a></li>
             <li><a href="#">Receitas</a></li>
-            <li><a href="#">DRE e Investimentos</a></li>
+            <li><a href="#">DRE</a></li>
+            <li><a href="#">Investimentos</a></li>
+            <li><a href="#">Compras</a></li>
           </ul>
         </li>
         <li>
@@ -92,10 +95,16 @@
             ><span class="material-symbols-rounded">lightning_stand</span>Skills
           </a>
         </li>
+        <li>
+          <a href="#"
+            ><span class="material-symbols-rounded">swords</span>RPG
+          </a>
+        </li>
       </ul>
     </nav>
     <main>
       <h1>Agenda</h1>
+      <!-- Adicionar Mẽs atual aqui-->
     </main>
   </body>
 </html>
