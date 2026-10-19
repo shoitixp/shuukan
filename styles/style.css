@@ -1,74 +1,130 @@
-html {
-  font-family: "Exo 2", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  background-color: #000f4d;
-  color: #ffffff;
-}
-
+@charset "UTF-8";
 /* excluir depois (inicio)*/
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.3);
+  border: 1px solid rgba(255, 0, 0, 0.3);
 }
 /* excluir depois (fim)*/
+:root {
+  /* Estrutura (do mais escuro ao mais claro) */
+  --header: #01040b;
+  --sidebar: #050d20;
+  --bg: #0a1530;
+  --surface: #111f40;
+  --border: #22335a;
 
-/* layout a partir de tablet/desktop */
-@media (min-width: 768px) {
+  /* Texto */
+  --text: #f2f5fa;
+  --text-2: #8d9ab5;
+
+  /* Marca */
+  --primary: #2e8cff;
+  --primary-dark: #1546b8;
+  --accent: #22e1ff;
+  --grad: linear-gradient(135deg, #22e1ff 0%, #2e8cff 50%, #1546b8 100%);
+
+  /* Funcionais */
+  --reward: #ffb93b;
+  --positive: #2dd4a0;
+  --negative: #ff6b6b;
+
+  /* Medidas da estrutura */
+  --header-height: 56px;
+  --sidebar-width: 15rem;
+
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
 }
 
+.hidden-phone {
+  display: none;
+}
+
 .page-layout-header {
-  position: sticky;
-  top: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.sidebar {
-  box-sizing: border-box;
-  width: 200px;
-  background: #1e293b;
-  padding: 16px;
-  position: sticky; /* fica fixa ao rolar a página */
-  top: 0;
-}
-.botao-home {
-  display: grid;
-  grid-template-columns: auto 1fr; /* coluna do logo + coluna do texto */
-  grid-template-rows: auto auto; /* duas linhas */
-  column-gap: 0.6rem;
-  row-gap: 0.15rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
   align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  background: var(--header);
+  border-top: 1px solid var(--border);
+}
+
+.home {
 }
 
 .logo-shuukan {
-  grid-row: 1 / span 2; /* o logo ocupa as 2 linhas */
-  width: 2.6rem; /* ajuste o tamanho como preferir */
-  height: auto;
+  height: calc(var(--header-height) * 0.7);
+  width: auto;
+  flex-shrink: 0; /* o logo nunca encolhe */
 }
 
-#nome-site {
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  align-self: end; /* encosta o nome na linha de baixo */
+#quick {
+  flex: 1; /* ocupa o espaço que sobrar */
+  min-width: 0; /* evita estouro em telas pequenas */
+  height: 100%;
+  padding: 0 12px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
 
-.botao-home p {
-  margin: 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
-  align-self: start; /* encosta o slogan na linha de cima */
-  color: #a9bcd9;
+#quick::placeholder {
+  color: var(--text-2);
 }
 
-main {
-  margin-left: 250px; /* espaço para a sidebar */
+/*
+.sidebar {
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100dvh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 24px 16px;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar .nav-item {
+  position: relative;
+  color: var(--text-2);
+  border-radius: 10px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.sidebar .nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+.sidebar .nav-item.active {
+  background: rgba(46, 140, 255, 0.14);
+  color: var(--accent);
+}
+.sidebar .nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--grad);
+}
+*/
+html {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* layout a partir de tablet/desktop */
+@media (min-width: 768px) {
 }

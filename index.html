@@ -37,8 +37,10 @@
     <header class="page-layout-header">
       <a href="index.html" class="home">
         <img src="images/logo-shuukan.png" alt="" class="logo-shuukan" />
-        <span id="nome-site">Shuukan</span>
-        <span id="slogan" lang="en">Be proud of yourself</span>
+        <span class="hidden-phone" id="nome-site">Shuukan</span>
+        <span class="hidden-phone" id="slogan" lang="en"
+          >Be proud of yourself</span
+        >
       </a>
       <input
         type="text"
@@ -46,12 +48,12 @@
         name="quick"
         placeholder="Quick command..."
       />
-      <div class="painel-data">
+      <div class="painel-data hidden-phone">
         <time id="data-hoje" datetime="2026-01-31"></time>
         <span id="dia-semana-hoje"></span>
         <time id="hora-hoje" datetime="00:00"></time>
       </div>
-      <div class="painel-tarefa">
+      <div class="painel-tarefa hidden-phone">
         <p>
           Sua próxima tarefa é:
           <span id="proxima-tarefa"><strong>colocar função aqui</strong></span>
