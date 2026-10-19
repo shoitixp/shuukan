@@ -1,13 +1,13 @@
 @charset "UTF-8";
-/* excluir depois (inicio)*/
+
 * {
-  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-sizing: border-box;
 }
-/* excluir depois (fim)*/
+
 :root {
   /* Estrutura (do mais escuro ao mais claro) */
   --header: #01040b;
-  --sidebar: #050d20;
+  --menu: #050d20;
   --bg: #0a1530;
   --surface: #111f40;
   --border: #22335a;
@@ -15,8 +15,7 @@
   /* Texto */
   --text: #f2f5fa;
   --text-2: #8d9ab5;
-
-  /* Marca */
+  --font1: "Exo 2", sans-serif /* Marca */;
   --primary: #2e8cff;
   --primary-dark: #1546b8;
   --accent: #22e1ff;
@@ -28,10 +27,23 @@
   --negative: #ff6b6b;
 
   /* Medidas da estrutura */
-  --header-height: 56px;
+  --header-height: 50px;
+  --header-content-size: calc(var(--header-height) * 0.8);
   --sidebar-width: 15rem;
 
   color-scheme: dark;
+}
+
+html {
+  font-family: var(--font1);
+  font-optical-sizing: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 body {
@@ -42,27 +54,68 @@ body {
   display: none;
 }
 
-.page-layout-header {
+.topbar {
+  position: sticky;
+  top: 0;
+  background: var(--header);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  gap: 12px;
+  padding: 0.2rem 0.7rem;
+  height: var(--header-height);
+}
+
+.expand-menu {
+  background: transparent;
+  width: var(--header-content-size);
+  height: var(--header-content-size);
+  font-size: calc(var(--header-content-size) * 0.5);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-shuukan {
+  height: var(--header-content-size);
+  width: auto;
+  flex-shrink: 0; /* o logo nunca encolhe */
+}
+
+#nome-site {
+  font-size: var(--header-content-size);
+  line-height: 1;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.menu-quick {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   height: var(--header-height);
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  box-sizing: border-box;
-  background: var(--header);
+  background: var(--menu);
   border-top: 1px solid var(--border);
 }
 
-.home {
-}
-
-.logo-shuukan {
-  height: calc(var(--header-height) * 0.7);
-  width: auto;
-  flex-shrink: 0; /* o logo nunca encolhe */
+.home-buttom {
+  color: var(--text);
 }
 
 #quick {
@@ -74,6 +127,7 @@ body {
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 10px;
+  font-size: 1rem;
 }
 
 #quick::placeholder {
@@ -120,10 +174,6 @@ body {
   background: var(--grad);
 }
 */
-html {
-  font-family: "Exo 2", sans-serif;
-  font-optical-sizing: auto;
-}
 
 /* layout a partir de tablet/desktop */
 @media (min-width: 768px) {

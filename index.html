@@ -34,19 +34,34 @@
     />
   </head>
   <body>
-    <header class="page-layout-header">
+    <header class="topbar">
+      <button
+        class="expand-menu phone-view"
+        type="button"
+        aria-label="Abrir menu lateral"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+        ☰
+      </button>
       <a href="index.html" class="home">
         <img src="images/logo-shuukan.png" alt="" class="logo-shuukan" />
-        <span class="hidden-phone" id="nome-site">Shuukan</span>
+        <span id="nome-site">Shuukan</span>
         <span class="hidden-phone" id="slogan" lang="en"
           >Be proud of yourself</span
         >
       </a>
+    </header>
+    <nav class="menu-quick">
+      <a href="index.html" class="home-buttom"
+        ><span class="material-symbols-rounded">home</span></a
+      >
       <input
         type="text"
         id="quick"
         name="quick"
         placeholder="Quick command..."
+        aria-label="Comando rápido"
       />
       <div class="painel-data hidden-phone">
         <time id="data-hoje" datetime="2026-01-31"></time>
@@ -71,7 +86,7 @@
           placeholder="Condicional"
         />
       </div>
-    </header>
+    </nav>
     <nav class="sidebar">
       <ul>
         <li>
