@@ -134,6 +134,10 @@ body {
   color: var(--text-2);
 }
 
+.painel-data{
+  color:var(--text-2);
+}
+
 /*
 .sidebar {
   position: sticky;
@@ -175,6 +179,6 @@ body {
 }
 */
 
-/* layout a partir de tablet/desktop */
-@media (min-width: 768px) {
+main{
+  background: var(--bg)
 }
