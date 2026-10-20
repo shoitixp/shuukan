@@ -122,7 +122,7 @@ body {
   font-weight: 650;
   letter-spacing: 0.05em;
   color: var(--text);
-  text-shadow: 0 2px 0 rgba(141, 154, 181, 0.3);
+  text-shadow: 0 2px 0 var(--border);
 }
 
 .menu-quick {
@@ -137,7 +137,7 @@ body {
   padding: 8px 12px calc(8px + var(--safe-bottom));
   background: var(--menu);
   border-top: 1px solid var(--border);
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 -4px 16px var(--header);
 }
 
 .home-buttom {
@@ -189,7 +189,7 @@ body {
 
 #quick:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(34, 225, 255, 0.18);
+  box-shadow: 0 0 0 3px var(--border);
 }
 
 .painel-data {
