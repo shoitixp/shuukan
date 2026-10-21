@@ -6,8 +6,7 @@
 
 :root {
   /* Estrutura (do mais escuro ao mais claro) */
-  --header: #01040b;
-  --menu: #050d20;
+  --menu: #030b1c;
   --bg: #0a1530;
   --surface: #111f40;
   --border: #22335a;
@@ -66,7 +65,7 @@ body {
   gap: 12px;
   height: var(--header-height);
   padding: 0.2rem 0.7rem;
-  background: var(--header);
+  background: var(--menu);
   border-bottom: 1px solid var(--border);
 }
 
@@ -114,6 +113,7 @@ body {
   height: var(--header-content-size);
   width: auto;
   flex-shrink: 0; /* o logo nunca encolhe */
+  filter: drop-shadow(0 2px 0 var(--border));
 }
 
 #nome-site {
@@ -137,7 +137,7 @@ body {
   padding: 8px 12px calc(8px + var(--safe-bottom));
   background: var(--menu);
   border-top: 1px solid var(--border);
-  box-shadow: 0 -4px 16px var(--header);
+  box-shadow: 0 -4px 16px var(--bg);
 }
 
 .home-buttom {
